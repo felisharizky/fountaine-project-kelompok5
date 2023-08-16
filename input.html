@@ -20,10 +20,9 @@
     <input type="radio" id="laki" name="jenis_kelamin" value="laki">Laki - laki<br>
     <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">Perempuan<br><br>
     
-    <label for="jenis lapangan">Jenis Lapangan : </label><br><br>
-    <input type="checkbox" id="LapanganVinyl" name="lapangan[]" value="LapanganVinyl">Lapangan Vinyl
-    <input type="checkbox" id="LapanganSintetis" name="lapangan[]" value="LapanganSintesis">Lapangan Sintesis<br><br>
-
+   <label for="jenis lapangan">Jenis Lapangan : </label><br><br>
+    <input type="checkbox" id="LapanganVinyl"  name="lapang" onclick="limit(this)">Lapangan Vinyl
+    <input type="checkbox" id="LapanganSintetis" name="lapang" onclick="limit(this)">Lapangan Sintesis<br><br>
 
     <label for="waktu_main">Waktu Main :</label><br><br> <select name="waktu_main" id="waktu_main">Waktu Main
         <option value="pagi">Pagi</option>
@@ -47,6 +46,17 @@
     <script>
         function resetForm() {
              document.getElementById("user-form").reset();
+        }
+         function resetForm() {
+             document.getElementById("user-form").reset();
+        }
+        function limit(checkbox){
+            const check = document.querySelectorAll('input[type="checkbox"][name="lapang"]');
+            check.forEach(check => {
+                if (check !== checkbox){
+                    check.checked = false;
+                }
+            });
         }
     </script>
 </body>
