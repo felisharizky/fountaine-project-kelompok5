@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <form method="post" action="list.html">
+    <h1>Form Reservasi Lapangan</h1>
+
+    <label for="namaTim">Nama Tim : </label><br><br>
+    <input type="text" id="nama" name="nama" required><br><br>
+    <label for="alamat">Alamat :</label><br><br>
+    <input type="text" id="alamat" name="alamat" required><br><br>
+    <label for="nomorTelepon">Nomor Telepon :</label><br><br>
+    <input type="tel" id="nomorTelepon" name="nomorTelepon" required><br><br>
+
+    <label for="jenisKelamin">Jenis Kelamin :</label><br><br>
+    <input type="radio" id="laki" name="jenis_kelamin" value="laki">Laki - laki<br>
+    <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">Perempuan<br><br>
+    
+    <label for="jenis lapangan">Jenis Lapangan : </label><br><br>
+    <input type="checkbox" id="LapanganVinyl" name="lapangan[]" value="LapanganVinyl">Lapangan Vinyl
+    <input type="checkbox" id="LapanganSintetis" name="lapangan[]" value="LapanganSintesis">Lapangan Sintesis<br><br>
+
+
+    <label for="waktu_main">Waktu Main :</label><br><br> <select name="waktu_main" id="waktu_main">Waktu Main
+        <option value="pagi">Pagi</option>
+        <option value="siang">Siang</option>
+        <option value="malam">Malam</option>
+    </select>
+    <br><br>
+
+    <label for="keterangan">Keterangan</label><br>
+    <textarea name="keterangan" id="keterangan" cols="65" rows="5"></textarea><br><br>
+    
+    <input type="submit" value="Submit">
+    </form>
+    
+    <form action="welcome.html" method="GET">
+        <input type="submit" value="Batal">
+    </form>
+    
+    <button onclick="resetForm()">Ulang</button>
+
+    <script>
+        function resetForm() {
+            document.getElementById("nama").value = "";
+            document.getElementById("alamat").value = "";
+            document.getElementById("nomorTelepon").value = "";
+            document.getElementById("laki").checked = false;
+            document.getElementById("perempuan").checked = false;
+            document.getElementById("LapanganVinyl").checked = false;
+            document.getElementById("LapanganSintesis").checked = false;
+            document.getElementById("waktu_main").selectedIndex = 0;
+            document.getElementById("keterangan").value = "";
+        }
+    </script>
+</body>
+</html>
