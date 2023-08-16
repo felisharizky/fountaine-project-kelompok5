@@ -6,7 +6,7 @@
     <title>input</title>
 </head>
 <body>
-    <form method="post" action="list.html">
+    <form method="post" action="list.html" id="user-form">>
     <h1>Form Reservasi Lapangan</h1>
 
     <label for="namaTim">Nama Tim : </label><br><br>
@@ -46,15 +46,7 @@
 
     <script>
         function resetForm() {
-            document.getElementById("nama").value = "";
-            document.getElementById("alamat").value = "";
-            document.getElementById("nomorTelepon").value = "";
-            document.getElementById("laki").checked = false;
-            document.getElementById("perempuan").checked = false;
-            document.getElementById("LapanganVinyl").checked = false;
-            document.getElementById("LapanganSintesis").checked = false;
-            document.getElementById("waktu_main").selectedIndex = 0;
-            document.getElementById("keterangan").value = "";
+             document.getElementById("user-form").reset();
         }
     </script>
 </body>
