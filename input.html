@@ -4,6 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>input</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f1dd69;
+    color: #101111;
+    padding: 120px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 5px;
+}
+
+button,
+input[type="submit"] {
+  width: 35%;
+  padding: 10px;
+  background-color: #cb851c;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 50px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #98bce2;
+}
+
+button[value="Batal"] {
+  background-color: #dc3545;
+  
+}
+
+button[value="Batal"]:hover {
+  background-color: #c82333;
+}
+
+button{
+    background-color: #cb851c;
+    width: 35%;
+
+}
+
+/* Mengatur tampilan input yang sedang aktif */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #f82828;
+  outline: none;
+}
+
+button,
+input[type="submit"],
+button[value="Batal"] {
+  transition: background-color 0.3s;
+}
+    </style>
 </head>
 <body>
     <form method="post" action="list.html" id="user-form">
