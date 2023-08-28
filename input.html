@@ -101,24 +101,8 @@ button:hover {
         <a href="login.html">
         <button type="button">Batal</button>
         </a>
-        <button class="button-secondary" onclick="resetForm()">Ulang</button>
+        <button class="button-secondary" type="reset">Ulang</button>
  </div>
-            
-    <script>
-        function resetForm() {
-             document.getElementById("user-form").reset();
-        }
-         function resetForm() {
-             document.getElementById("user-form").reset();
-        }
-        function limit(checkbox){
-            const check = document.querySelectorAll('input[type="checkbox"][name="lapang"]');
-            check.forEach(check => {
-                if (check !== checkbox){
-                    check.checked = false;
-                }
-            });
-        }
-    </script>
+    </form>          
 </body>
 </html>
