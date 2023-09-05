@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>input</title>
     <style>
         body {
@@ -70,39 +71,67 @@ button:hover {
     <form method="post" action="list.html" id="user-form">
     <h1>Form Reservasi Lapangan</h1>
 
-    <label for="namaTim">Nama Tim : </label><br><br>
-    <input type="text" id="nama" name="nama" required><br><br>
-    <label for="alamat">Alamat :</label><br><br>
-    <input type="text" id="alamat" name="alamat" required><br><br>
-    <label for="nomorTelepon">Nomor Telepon :</label><br><br>
-    <input type="number" id="nomorTelepon" name="nomorTelepon" required><br><br>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nama Tim : </span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div><br>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Alamat : </span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div><br>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nomor Telepon : </span>
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div><br>
+   
+     <label for="kategori">Kategori :</label>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Pelajar
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Non Pelajar 
+        </label>
+      </div><br>
 
-    <label for="kategori">Kategori :</label><br><br>
-    <input type="radio" id="pelajar" name="kategori" value="pelajar">Pelajar<br>
-    <input type="radio" id="nonpelajar" name="kategori" value="non_pelajar">Non Pelajar<br><br>
-    
-   <label for="jenis lapangan">Jenis Lapangan : </label><br><br>
-    <input type="checkbox" id="LapanganVinyl"  name="lapang" onclick="limit(this)">Lapangan Vinyl
-    <input type="checkbox" id="LapanganSintetis" name="lapang" onclick="limit(this)">Lapangan Sintesis<br><br>
-
-    <label for="waktu_main">Waktu Main :</label><br><br> <select name="waktu_main" id="waktu_main">Waktu Main
-        <option value="pagi">Pagi</option>
-        <option value="siang">Siang</option>
-        <option value="malam">Malam</option>
+         <label for="jenis lapangan">Jenis Lapangan : </label>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Lapangan Vinyl
+        </label>
+      </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Lapangan Sintesis
+        </label>
+      </div><br>
+   
+      
+      <label for="waktu_main">Waktu Main :</label><select name="waktu_main" id="waktu_main">Waktu Main
+        <option value="1">Pagi</option>
+        <option value="2">Siang</option>
+        <option value="3">Malem</option>
     </select>
     <br><br>
-
-    <label for="keterangan">Keterangan</label><br>
-    <textarea name="keterangan" id="keterangan" cols="65" rows="5"></textarea><br><br>
-
+   
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Keterangan</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
     <br>
- <div class="button-container">
-        <button>Kirim</button>
-        <a href="login.html">
-        <button type="button">Batal</button>
-        </a>
-        <button class="button-secondary" type="reset">Ulang</button>
- </div>
-    </form>          
+
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="submit" class="btn btn-success">Kirim</button>
+        <button type="reset" class="btn btn-success">Ulang</button>
+        <button type="button" class="btn btn-success">Kembali</button>
+      </div>
+</div>
+</form>          
 </body>
 </html>
