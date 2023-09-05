@@ -8,7 +8,7 @@
     <style>
         body {
     font-family: Arial, sans-serif;
-    background-color: #80740f;
+    background-color: #bef5a8;
     color: #101111;
     padding: 140px;
 }
@@ -17,17 +17,6 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
-
-form {
-  width: 75%;
-  max-width: 550px;
-  margin: 20px auto;
-  padding: 15px;
-  background-color: #c7b54e;
-  border-radius: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 label {
   display: block;
   font-weight: bold;
@@ -70,7 +59,9 @@ button:hover {
 <body>
     <form method="post" action="list.html" id="user-form">
     <h1>Form Reservasi Lapangan</h1><br><br>
-
+    <div class="container">
+    <div class="row">
+    <div class="col">
     <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Nama Tim : </span>
         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -83,7 +74,9 @@ button:hover {
         <span class="input-group-text" id="inputGroup-sizing-default">Nomor Telepon : </span>
         <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
       </div><br>
-   
+      </div>
+
+     <div class="col">
      <label for="kategori">Kategori :</label>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -111,8 +104,9 @@ button:hover {
           Lapangan Sintesis
         </label>
       </div><br>
+     </div>
    
-      
+      <div class="col">
       <label for="waktu_main">Waktu Main :</label><select name="waktu_main" id="waktu_main">Waktu Main
         <option value="1">Pagi</option>
         <option value="2">Siang</option>
@@ -125,6 +119,7 @@ button:hover {
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
     <br>
+      </div>
 
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
         <button type="submit" class="btn btn-success">Kirim</button>
@@ -132,6 +127,9 @@ button:hover {
         <button type="button" class="btn btn-success">Kembali</button>
       </div>
 </div>
-</form>          
+</form>
+    <footer class="mt-5 p-1 text-center">
+      <p class="fw-bold mt-3">INPUT FOUNTAINE PROJECT &COPY; 2023</p>
+    </footer>
 </body>
 </html>
